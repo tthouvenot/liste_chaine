@@ -27,3 +27,16 @@ new_sub_list = my_list.sub_list(2, 5)
 
 print("--- Sous liste ---")
 new_sub_list.show_list_elements()
+
+print('--- Avant callback ---')
+my_list.show_list_elements()
+
+print("--- Callback ---")
+# my_list.list_map(add_value)
+
+print('--- Après callback ---')
+my_list.show_list_elements()
+
+print("--- Lambda ---")
+my_list.list_map(lambda x: x*2)
+my_list.show_list_elements()

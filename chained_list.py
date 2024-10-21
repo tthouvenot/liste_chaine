@@ -29,7 +29,7 @@ class List:
 
         printed_element = self.first_element
 
-        while printed_element != None:
+        while printed_element is not None:
             print(printed_element.value)
             printed_element = printed_element.next
 
@@ -78,4 +78,23 @@ class List:
 
         return sub_list
     
+    # Appliquer un traitement sur chaque élément
+    # On peut soit appeler un callback soit une lambda
+    # Pour la callback: on fait une référence (my_list.list_map(le nom de la callback))
+    # Pour la lambda: On fait directement la lambda dans l'appelle (my_list.list_map(lambda x: x*2))
+    def list_map(self, callback):
+        
+        last_entry = self.first_element
+
+        while last_entry is not None:
+            last_entry.value = callback(last_entry.value)
+            last_entry = last_entry.next
+
+# Permet d'être utiliser en callback
+def add_value(add_value, start_value):
+    
+    return add_value + start_value
+
+
+        
 
