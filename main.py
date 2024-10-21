@@ -40,6 +40,7 @@ my_list.show_list_elements()
 
 print("--- Lambda ---")
 my_list.list_map(lambda x: x*2)
+<<<<<<< HEAD
 my_list.show_list_elements()
 =======
 # print("--- Sous liste ---")
@@ -64,3 +65,6 @@ my_list.reversed_data()
 my_list.show_list_elements()
 # print(my_list.first_element)
 >>>>>>> 6ec3639 (docu: dernier tp liste chaîné)
+=======
+my_list.show_list_elements()
+>>>>>>> f0e94c5 (docu: ajout d'une callback avec lambda)
