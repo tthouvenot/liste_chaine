@@ -90,6 +90,71 @@ class List:
             last_entry.value = callback(last_entry.value)
             last_entry = last_entry.next
 
+###############################
+#                             #
+#   Dernier TP liste chaîné   #
+#                             #
+###############################
+
+    # Reversed list
+    def reversed_data(self):
+
+        current_entry = self.first_element
+        previous_entry = current_entry
+        self.first_element= None
+        self.last_element = None
+
+        while current_entry:
+            next_entry = current_entry.next
+
+            if self.last_element is None:
+                self.last_element = current_entry
+                current_entry.next= None
+            elif self.first_element is None and current_entry.next is None:
+                self.first_element = current_entry
+                current_entry.next = previous_entry
+            else:
+                current_entry.next = previous_entry
+            
+            previous_entry = current_entry
+            current_entry = next_entry
+
+    # new reversed list
+    def new_reversed_list(self):
+
+        self.reversed_data()
+        new_list = List()
+
+        element = self.first_element
+
+        while element is not None:
+            new_list.add_element(element.value)
+            element = element.next
+
+        self.reversed_data()
+
+        return new_list
+    
+    # Show reverse
+    def show_reverse(self):
+        self.reversed_data()
+        self.show_list_elements()
+        self.reversed_data()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Permet d'être utiliser en callback
 def add_value(add_value, start_value):
     

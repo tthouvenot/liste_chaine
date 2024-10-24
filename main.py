@@ -25,24 +25,6 @@ while not end_of_input:
 
 # new_sub_list = my_list.sub_list(2, 5)
 
-<<<<<<< HEAD
-print("--- Sous liste ---")
-new_sub_list.show_list_elements()
-
-print('--- Avant callback ---')
-my_list.show_list_elements()
-
-print("--- Callback ---")
-# my_list.list_map(add_value)
-
-print('--- Après callback ---')
-my_list.show_list_elements()
-
-print("--- Lambda ---")
-my_list.list_map(lambda x: x*2)
-<<<<<<< HEAD
-my_list.show_list_elements()
-=======
 # print("--- Sous liste ---")
 # new_sub_list.show_list_elements()
 
@@ -59,12 +41,43 @@ my_list.show_list_elements()
 # my_list.list_map(lambda x: x*2)
 # my_list.show_list_elements()
 
+# print("--- Sous liste ---")
+# new_sub_list.show_list_elements()
 
-print("--- reversed ---")
+# print('--- Avant callback ---')
+# my_list.show_list_elements()
+
+# print("--- Callback ---")
+# # my_list.list_map(add_value)
+
+# print('--- Après callback ---')
+# my_list.show_list_elements()
+
+# print("--- Lambda ---")
+# my_list.list_map(lambda x: x*2)
+# my_list.show_list_elements()
+
+print("--- New Reversed List ---")
+my_list.show_list_elements()
+print()
+new_reversed_list = my_list.new_reversed_list()
+print()
+new_reversed_list.show_list_elements()
+print()
+print("---------")
+
+print("--- Show reverse ---")
+my_list.show_list_elements()
+print()
+my_list.show_reverse()
+print()
+my_list.show_list_elements()
+print()
+print("---------")
+
+print("--- Reversed data ---")
 my_list.reversed_data()
+print()
 my_list.show_list_elements()
-# print(my_list.first_element)
->>>>>>> 6ec3639 (docu: dernier tp liste chaîné)
-=======
-my_list.show_list_elements()
->>>>>>> f0e94c5 (docu: ajout d'une callback avec lambda)
+print()
+print("---------")
